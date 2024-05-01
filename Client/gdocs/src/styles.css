@@ -1,0 +1,30 @@
+/* styles.css */
+
+/* Custom styles for Quill container */
+.container {
+  margin: 15px;
+  padding: 1px;
+  border: 1px solid #ccc;
+  height: 80vh; /* Adjust height as needed */
+  /* overflow-y: auto; Add scroll if content exceeds height */
+  border: #f3f3f3;
+  background-color: white;
+  box-shadow: #f3f3f3;
+}
+.ql-toolbar {
+  position: sticky;
+  display: flex;
+  justify-content: center;
+  background-color: #f3f3f3;
+}
+/* Hide Quill toolbar when printing */
+@media print {
+  .ql-toolbar {
+    display: none !important;
+  }
+
+  @page {
+    size: auto;
+    margin: 0;
+  }
+}
